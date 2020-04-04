@@ -1,0 +1,47 @@
+I have made a basic C++ computer program that actually implements the Layer-Wise method to solve a 3X3X3  Rubik’s Cube in under 800 lines of code.
+
+I gotta admit this was a pretty fun thing to try out in code.
+
+Now before coming to the Code, let me tell you something important…
+
+First of all, if you have ever broken a 3X3X3 Rubik’s Cube (even out of frustration), you would definitely notice this central piece…
+
+What I want you to realize is the fact that however badly you scramble a Rubik’s Cube, the center pieces don’t move at all relative to each other.
+
+So that means if a side has a white center piece, all the other pieces on that side should become white by the time you completely solve the rubik’s cube. Similarly if the central piece of another side is say red, then all the other 8 pieces on that side should become red after the cube is solved. It’s a rudimentary idea.
+
+Now the big problem is how to manipulate all the six sides of the rubik’s cube. To do that, I spent quite a bit of time. I first tried using 2-D Arrays in C++ but it was a bit challenging to manipulate how the various sides would change as I rotate the various sides of the cube.
+
+So, I came up with a really simple idea…
+
+Yup. I simply opened cube on paper.
+
+I created six linear arrays in my code having size 9 .
+
+In C++, whenever you create an array of size n, the indexing goes from 0 to n-1
+
+So for each of our six arrays having size 9, the indexing would be from 0 to 8. And that’s why on each side in the above image you’ll see numbers arranged from 0 to 8.
+
+Now you might be wondering why I’ve arranged these numbers in same order for green, red, blue and orange side and in a different order for white and yellow side. Well as it turns out, this arrangement just happened to help me see some patterns while coding ??
+
+Doesn’t really matter how you number it.
+
+Phew. So now I’ve got the rubik’s cube opened up and spread out on a piece of paper. This is my new perspective of looking at the rubik’s cube now.
+
+Now imagine I rotate the red side of the cube by 90 degrees. What will really happen is that the sides adjacent to red (that is green, white, blue and yellow) will also get affected. So I spent some time just thinking how all this would look from our perspective.
+
+And once this was figured out, all I really did for next few days(1 month and 3 days to be specific) is just code and code and code the algorithm. That was the real task. The rest is history ??
+
+Okay now I’ll scramble my Rubik’s Cube and show you exactly how to give input. So here’s my scrambled cube…
+
+Few Important things…
+
+All you gotta do is give the input state correctly and press enter. You’ll see a sequence of colours appear line by line. You need to just follow the sequence from the first colour to the last colour in the exact order and rotate those sides of your scrambled cube in the CLOCKWISE direction by 90 degree each time
+
+Clockwise direction because I’m a lazy coder and I have made the function to turn any side in the clockwise direction only. If the situation requires that the side must be turned in anti-clockwise direction, my code will simply give the command to rotate that side in clockwise direction 3 times. Just think about it. It is essentially the same thing. Moreover my aim was to code this up in under 1000 lines ??
+
+If you give a wrong input, there would be infinite steps. I haven’t used any exception handling in the code . For avoiding wrong inputs, I have a plan to learn some image processing so that a I can simply show all the sides of the cube to a colour sensor and it will detect the colour of each piece and then automatically substitute the 9 elements of my six colour arrays.
+
+Sometimes the steps may tell you to turn the same side more than 4 times. Don’t worry. Just turn those side whatever number to times it says to turn. That happens when the code is searching for some specific combinations
+
+                                THANK YOU
